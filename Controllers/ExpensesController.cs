@@ -89,7 +89,7 @@ namespace Cozma_Laurentiu_Lab6.Controllers
           {
               return Problem("Entity set 'ExpenseContext.Expense'  is null.");
           }
-            _context.Expense.Add(expense);
+            _context.Expense.Add(expense); 
             await _context.SaveChangesAsync();
 
             //return CreatedAtAction("GetExpense", new { id = expense.Id }, expense);
