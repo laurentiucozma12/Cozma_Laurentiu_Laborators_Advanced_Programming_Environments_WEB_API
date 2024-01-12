@@ -77,7 +77,7 @@ namespace Cozma_Laurentiu_Lab6.Controllers
         [HttpPost]
         public async Task<ActionResult<ExpenseDTO>> PostExpense(ExpenseDTO expense)
         {
-            _context.ExpenseDTO.Add(expense); 
+            _context.ExpenseDTO.Add(expense);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetExpense), new { id = expense.Id }, expense);
